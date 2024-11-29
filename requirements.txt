@@ -1,0 +1,8 @@
+PyMuPDF
+pandas
+numpy
+torch
+transformers
+streamlit
+plotly
+scikit-learn
