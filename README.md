@@ -1,73 +1,52 @@
-# PDF Analysis PoC
+# Advanced PDF Analysis (Proof Of Concept)
 
-A proof-of-concept application that demonstrates PDF text extraction, AI-powered analysis, and interactive visualization capabilities. This project uses modern NLP techniques to analyze PDF documents and present insights through a Streamlit dashboard.
+A PDF analysis tool built with Streamlit that provides document analysis including text extraction, sentiment analysis, keyword identification, and various visualizations.
 
 ## Features
 
-- PDF text and metadata extraction
-- Text preprocessing and analysis
-- Sentiment analysis using transformer models
-- Interactive visualizations of analysis results
-- Web-based dashboard interface
-
-## Requirements
-
-- Python 3.8+
-- Dependencies:
-  ```
-  PyMuPDF
-  pandas
-  numpy
-  transformers
-  streamlit
-  plotly
-  ```
-
-## Installation
-
-1. Create and activate a virtual environment (recommended):
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: .\venv\Scripts\activate
-   ```
-
-2. Install the required packages:
-   ```bash
-   pip install -r requirements.txt
-   ```
+- **Text Extraction & Structure Analysis**: Extract and analyze document structure, including headers and content blocks
+- **Sentiment Analysis**: Analyze sentiment patterns throughout the document
+- **Keyword Extraction**: Identify key terms and phrases using TF-IDF
+- **Word Frequency Analysis**: Visualize word usage patterns
+- **Document Statistics**: Generate comprehensive document metrics
+- **Interactive Visualizations**: Multiple interactive plots for data exploration
+- **Document Preview**: Quick access to document content and structure
 
 ## Usage
 
 1. Start the Streamlit application:
-   ```bash
-   streamlit run app.py
-   ```
+```bash
+streamlit run app.py
+```
 
-2. Open your web browser and navigate to `http://localhost:8501`
+2. Open your web browser and navigate to the provided local URL (typically http://localhost:8501)
 
 3. Upload a PDF file using the file uploader
 
-4. View the analysis results in the dashboard:
+4. View the analysis results including:
    - Document metadata
-   - Text analytics
-   - Sentiment analysis visualization
-   - Extracted text preview
+   - Text structure analysis
+   - Keyword extraction
+   - Word frequency visualizations
+   - Sentiment analysis
+   - Document preview
 
-## Project Structure
+## Technical Details
 
-```
-pdf-analysis-poc/
-├── app.py              # Main application file
-├── requirements.txt    # Project dependencies
-└── README.md          # This file
-```
+The application uses several key technologies:
+- **Streamlit**: For the web interface
+- **PyMuPDF**: For PDF processing
+- **Transformers**: For sentiment analysis using DistilBERT
+- **NLTK**: For text processing
+- **Plotly**: For interactive visualizations
+- **Pandas & NumPy**: For data manipulation
+- **scikit-learn**: For TF-IDF feature extraction
 
-## Future Enhancements
+## Error Handling
 
-- Table extraction from PDFs
-- OCR support for scanned documents
-- Document classification
-- Named Entity Recognition
-- Topic modeling
-- Database integration for result storage
-- Batch processing capabilities
+The application includes comprehensive error handling for:
+- PDF file processing
+- Text extraction
+- Model loading
+- Memory management
+- Invalid file formats
