@@ -2,7 +2,9 @@ PyMuPDF
 pandas
 numpy
 torch
-transformers
-streamlit
 plotly
+transformers
 scikit-learn
+streamlit
+nltk
+PyMuPDF
